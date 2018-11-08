@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace TP1_RegressaoLinear
 {
@@ -18,19 +17,28 @@ namespace TP1_RegressaoLinear
             //Coluna 11 = ValorIPTU
             //Coluna 14 = Bairro
 
-            var Precos = ConvertStringListToDouble(ReadExcelReturnColumn(2));
-            var VagasGaragem = ConvertStringListToDouble(ReadExcelReturnColumn(9));
-            var AreasUteis = ConvertStringListToDouble(ReadExcelReturnColumn(3));
-            var ValorIPTU = ConvertStringListToDouble(ReadExcelReturnColumn(11));
-            var Bairros = ReadExcelReturnColumn(14);
+            var ListaPrecos = ConvertStringListToDouble(ReadExcelReturnColumn(2));
+            var ListaVagasGaragem = ConvertStringListToDouble(ReadExcelReturnColumn(9));
+            var ListaAreasUteis = ConvertStringListToDouble(ReadExcelReturnColumn(3));
+            var ListaValorIPTU = ConvertStringListToDouble(ReadExcelReturnColumn(11));
+            var ListaBairros = ReadExcelReturnColumn(14);
 
-            foreach (var a in Bairros)
-            {
-                Console.WriteLine(a);
-            }
+            //foreach (var a in Bairros)
+            //{
+            //    Console.WriteLine(a);
+            //}
+
+            Console.WriteLine("1) Preco x VagasGaragem: " + BaseCalculo(ListaBairros, ListaPrecos, ListaValorIPTU, "Alto Barroca"));
+            Console.WriteLine("2) Preco x Area Util: ");
+            Console.WriteLine("3) Preco x Valor IPTU: ");
+            Console.WriteLine("4) Preco x Area Util: ");
 
             Console.ReadKey();
         }
+
+
+
+
 
         public static double MinimosQuadrados(double x, double y, double x2, double xy, double qtd)
         {
@@ -40,43 +48,36 @@ namespace TP1_RegressaoLinear
             return total;
         }
 
-        //public static double BaseCalculos(string Bairro, string Preco, string Valor, string Condicional)
-        //{
-        //    Dictionary<string, string> Items = new Dictionary<string, string>()
-        //        {
-        //            {"Bairro" , Bairro},
-        //            {"Preco" , Preco},
-        //            {"Valor" , Valor}
-        //        };
-            
+        public static double BaseCalculo(List<string> Bairros, List<double> Precos, List<double> Valores, string Condicional)
+        {
 
-        //    var x = 0;
-        //    var y = 0.0;
-        //    var x2 = 0;
-        //    var xy = 0;
-        //    var qtd = 0;
+            double x = 0;
+            double y = 0.0;
+            double x2 = 0;
+            double xy = 0;
+            double qtd = 0;
 
-        //    foreach(string Item in Items.Keys)
-        //    {
-        //        if (Condicional == "todos")
-        //        {
-        //            x += preco;
-        //            y += valor;
-        //            x2 += Math.Pow(preco, 2);
-        //            xy += preco * valor;
-        //            qtd += 1;
-        //        }
-        //        else if (bairro == Condicional)
-        //        {
-        //            x += preco;
-        //            y += valor;
-        //            x2 += Math.Pow(preco, 2);
-        //            xy += preco * valor;
-        //            qtd += 1;
-        //        }
-        //    }
-        //    return MinimosQuadrados(x, y, x2, xy, qtd);
-        //}
+            for(int i = 0; i < Bairros.Count; i++)
+            {
+                if (Condicional == "todos")
+                {
+                    x += Precos.ElementAt(i); 
+                    y += Valores.ElementAt(i);
+                    x2 += Math.Pow(Precos.ElementAt(i), 2);
+                    xy += Precos.ElementAt(i) * Valores.ElementAt(i);
+                    qtd += 1;
+                }
+                else if (Bairros.ElementAt(i) == Condicional)
+                {
+                    x += Precos.ElementAt(i);
+                    y += Valores.ElementAt(i);
+                    x2 += Math.Pow(Precos.ElementAt(i), 2);
+                    xy += Precos.ElementAt(i) * Valores.ElementAt(i);
+                    qtd += 1;
+                }
+            }
+            return MinimosQuadrados(x, y, x2, xy, qtd);
+        }
 
         public static List<string> ReadExcelReturnColumn(int ColumnIndex)
         {
