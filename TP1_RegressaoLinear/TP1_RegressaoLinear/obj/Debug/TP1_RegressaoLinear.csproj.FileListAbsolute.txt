@@ -3,3 +3,9 @@ C:\Users\mathe\Documents\Visual Studio 2015\TP1_RegressaoLinear\TP1_RegressaoLin
 C:\Users\mathe\Documents\Visual Studio 2015\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.pdb
 C:\Users\mathe\Documents\Visual Studio 2015\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.exe
 C:\Users\mathe\Documents\Visual Studio 2015\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.pdb
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe.config
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.exe
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.pdb
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.pdb
+C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csprojResolveAssemblyReference.cache

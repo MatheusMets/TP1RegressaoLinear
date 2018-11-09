@@ -23,15 +23,32 @@ namespace TP1_RegressaoLinear
             var ListaValorIPTU = ConvertStringListToDouble(ReadExcelReturnColumn(11));
             var ListaBairros = ReadExcelReturnColumn(14);
 
-            //foreach (var a in Bairros)
-            //{
-            //    Console.WriteLine(a);
-            //}
 
-            Console.WriteLine("1) Preco x VagasGaragem: " + BaseCalculo(ListaBairros, ListaPrecos, ListaValorIPTU, "Alto Barroca"));
-            Console.WriteLine("2) Preco x Area Util: ");
-            Console.WriteLine("3) Preco x Valor IPTU: ");
-            Console.WriteLine("4) Preco x Area Util: ");
+            //var AltoBarrocaLista = ListaBairros.Where(b => b.Equals("AltoBarroca"));
+
+            Console.WriteLine("1) Preco x VagasGaragem (Bairro Alto Barroca ): " + BaseCalculo(ListaBairros, ListaPrecos, ListaVagasGaragem, "Alto Barroca"));
+            Console.WriteLine("2) Preco x Area Util (Bairro Alto Barroca ): " + BaseCalculo(ListaBairros, ListaPrecos, ListaAreasUteis, "Alto Barroca"));
+            Console.WriteLine("3) Preco x Valor IPTU: (Bairro Alto Barroca ): " + BaseCalculo(ListaBairros, ListaPrecos, ListaValorIPTU, "Alto Barroca"));
+
+
+            List<double> NewListaPrecos = new List<double>();
+            List<double> NewListaVagasGaragem = new List<double>();
+            List<double> NewListaAreasUteis = new List<double>();
+            List<double> NewListaValorIPTU = new List<double>();
+            var AltoBarrocaLista = new List<string>();
+
+            for (int i = 0; i < ListaBairros.Count; i++)
+            {
+                if (ListaBairros.ElementAt(i).Equals("Alto Barroca"))
+                {
+                    AltoBarrocaLista.Add(ListaBairros.ElementAt(i));
+                    NewListaPrecos.Add(ListaPrecos.ElementAt(i));
+                    NewListaAreasUteis.Add(ListaAreasUteis.ElementAt(i));
+                    NewListaValorIPTU.Add(ListaValorIPTU.ElementAt(i));
+                }
+            }
+
+            Console.WriteLine("4) Preco x Area Util: (Todos os bairros): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaAreasUteis, "todos"));
 
             Console.ReadKey();
         }
@@ -93,7 +110,6 @@ namespace TP1_RegressaoLinear
                     var values = line.Split(';');
 
                     listA.Add(values[ColumnIndex]);
-                    //break;
                 }
             }
 
