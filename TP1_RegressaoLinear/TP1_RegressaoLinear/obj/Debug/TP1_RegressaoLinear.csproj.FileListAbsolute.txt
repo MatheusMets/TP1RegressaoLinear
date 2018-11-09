@@ -9,3 +9,10 @@ C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLine
 C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe
 C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.pdb
 C:\Users\mathe\Documents\Visual Studio 2015\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csprojResolveAssemblyReference.cache
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe.config
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.pdb
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csprojAssemblyReference.cache
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csproj.CoreCompileInputs.cache
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.exe
+C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.pdb
