@@ -22,8 +22,8 @@ namespace TP1_RegressaoLinear
             var ListaAreasUteis = ConvertStringListToDouble(ReadExcelReturnColumn(3));
             var ListaValorIPTU = ConvertStringListToDouble(ReadExcelReturnColumn(11));
             var ListaBairros = ReadExcelReturnColumn(14);
+            //�
 
-            
             List<double> NewListaPrecos = new List<double>();
             List<double> NewListaVagasGaragem = new List<double>();
             List<double> NewListaAreasUteis = new List<double>();
@@ -42,11 +42,11 @@ namespace TP1_RegressaoLinear
                 }
             }
 
-            Console.WriteLine("1) Preco x VagasGaragem (Bairro Alto Barroca ): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaVagasGaragem, "todos"));
-            Console.WriteLine("2) Preco x Area Util (Bairro Alto Barroca ): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaAreasUteis, "todos"));
-            Console.WriteLine("3) Preco x Valor IPTU: (Bairro Alto Barroca ): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaValorIPTU, "todos")); 
+            Console.WriteLine("1) Preco x VagasGaragem (Todos os bairros): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaVagasGaragem/*, "todos"*/));
+            Console.WriteLine("2) Preco x Area Util (Todos os bairros):  " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaAreasUteis/*, "todos"*/));
+            Console.WriteLine("3) Preco x Valor IPTU  (Todos os bairros): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, NewListaValorIPTU/*, "todos"*/)); 
 
-            Console.WriteLine("4) Preco x Area Util: (Todos os bairros): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, ListaAreasUteis, "Alto Barroca"));
+            Console.WriteLine("4) Preco x Area Util (Bairro Alto Barroca ): " + BaseCalculo(AltoBarrocaLista, NewListaPrecos, ListaAreasUteis/*, "Alto Barroca"*/));
 
             Console.ReadKey();
         }
@@ -59,38 +59,47 @@ namespace TP1_RegressaoLinear
         {
             var A = ((x * y) - (qtd * xy)) / Math.Pow(x, 2) - (qtd * (x2));
             var B = ((y) - A * x) / qtd;
-            var total = B + A * x;
+            var total = B + (A * x);
             return total;
         }
 
-        public static double BaseCalculo(List<string> Bairros, List<double> Precos, List<double> Valores, string Condicional)
+        public static double BaseCalculo(List<string> Bairros, List<double> Precos, List<double> ValoresVariantes/*, string Condicional*/)
         {
-
             double x = 0;
             double y = 0;
             double x2 = 0;
             double xy = 0;
             double qtd = 0;
 
-            for(int i = 0; i < Bairros.Count; i++)
+            //for(int i = 0; i < Bairros.Count; i++)
+            //{
+            //    if (Condicional == "todos")
+            //    {
+            //        x += Precos.ElementAt(i); 
+            //        y += Valores.ElementAt(i);
+            //        x2 += Math.Pow(Precos.ElementAt(i), 2);
+            //        xy += Precos.ElementAt(i) * Valores.ElementAt(i);
+            //        qtd += 1;
+            //    }
+            //    else if (Bairros.ElementAt(i) == Condicional)
+            //    {
+            //        x += Precos.ElementAt(i);
+            //        y += Valores.ElementAt(i);
+            //        x2 += Math.Pow(Precos.ElementAt(i), 2);
+            //        xy += Precos.ElementAt(i) * Valores.ElementAt(i);
+            //        qtd += 1;
+            //    }
+            //}
+
+            for (int i = 0; i < Bairros.Count; i++)
             {
-                if (Condicional == "todos")
-                {
-                    x += Precos.ElementAt(i); 
-                    y += Valores.ElementAt(i);
-                    x2 += Math.Pow(Precos.ElementAt(i), 2);
-                    xy += Precos.ElementAt(i) * Valores.ElementAt(i);
-                    qtd += 1;
-                }
-                else if (Bairros.ElementAt(i) == Condicional)
-                {
-                    x += Precos.ElementAt(i);
-                    y += Valores.ElementAt(i);
-                    x2 += Math.Pow(Precos.ElementAt(i), 2);
-                    xy += Precos.ElementAt(i) * Valores.ElementAt(i);
-                    qtd += 1;
-                }
+                x += Precos.ElementAt(i);
+                y += ValoresVariantes.ElementAt(i);
+                x2 += Math.Pow(Precos.ElementAt(i), 2);
+                xy += Precos.ElementAt(i) * ValoresVariantes.ElementAt(i);
+                qtd += 1;
             }
+
             return MinimosQuadrados(x, y, x2, xy, qtd);
         }
 
