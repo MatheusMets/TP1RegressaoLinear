@@ -53,8 +53,7 @@ namespace TP1_RegressaoLinear
 
 
 
-
-
+        //para regressão linear
         public static double MinimosQuadrados(double x, double y, double x2, double xy, double qtd)
         {
             var A = ((x * y) - (qtd * xy)) / Math.Pow(x, 2) - (qtd * (x2));
@@ -62,6 +61,16 @@ namespace TP1_RegressaoLinear
             var total = B + (A * x);
             return total;
         }
+
+        //para interpolação de lagrange
+        public static double InterpolacaoLagrange(double x, double y, double x2, double xy, double qtd)
+        {
+            var A = (x - qtd) * xy;
+            var B = (xy - qtd);
+            var total = y * (A / B);
+            return total;
+        }
+
 
         public static double BaseCalculo(List<string> Bairros, List<double> Precos, List<double> ValoresVariantes/*, string Condicional*/)
         {
@@ -101,6 +110,7 @@ namespace TP1_RegressaoLinear
             }
 
             return MinimosQuadrados(x, y, x2, xy, qtd);
+            //return InterpolacaoLagrange(x, y, x2, xy, qtd);
         }
 
         public static List<string> ReadExcelReturnColumn(int ColumnIndex)

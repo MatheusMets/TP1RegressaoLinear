@@ -16,3 +16,10 @@ C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_R
 C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csproj.CoreCompileInputs.cache
 C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.exe
 C:\Users\douglas.jose\Documents\git\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.pdb
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe.config
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.exe
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\bin\Debug\TP1_RegressaoLinear.pdb
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csprojAssemblyReference.cache
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.csproj.CoreCompileInputs.cache
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.exe
+D:\Users\douglasjtds\Desktop\FACULDADE\8 º Semestre\Tópicos Avançados em Banco de Dados\TrabalhoRegressaoLinear\TP1RegressaoLinear\TP1_RegressaoLinear\TP1_RegressaoLinear\obj\Debug\TP1_RegressaoLinear.pdb
